@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- manifest 적용 -->
+    <link rel="manifest" href="/jun08/manifest.json">
+    <meta name="theme-color" content="#666666">
+    <meta name="background-color" content="#ffffff">
+    <link rel="shortcut icon" href="/favicon-16x16.png">
+    <link rel="icon" href="/android-chrome-512x512.png" type="image/png" sizes="512x512">
+    <link rel="icon" href="/jun07/aaa.webp" type="image/webp" sizes="512x512">
+
+    <title>Document</title>
+    <style>
+        body,html {
+            margin: 0px;
+            height: 100%;
+            background:linear-gradient(to right,paleturquoise,palegreen,palegoldenrod,palevioletred,white,royalblue,tomato,paleturquoise) ;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            background: linear-gradient(to top, rgba(255,255,255,0.5), transparent,rgba(255,255,255,0.5), transparent,rgba(255,255,255,0.5), transparent);
+        }
+        div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: fit-content;
+            animation: r 2s linear infinite ;
+        }
+        @keyframes r{
+            from {
+                transform: rotateZ(0deg);
+            } to {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h1 style="font-size: 600%;">╰(*°▽°*)╯</h1>
+        </div>
+        <h2>8 June 2023</h2>
+    </main>
+    <script>
+        if ( "serviceWorker" in navigator ) {
+            navigator.serviceWorker
+                .register("/jun08/service-worker.js")
+                .then( console.log("done"));
+        }
+    </script>
+</body>
+</html>
