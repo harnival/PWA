@@ -10,7 +10,7 @@
     "background_color": "rgb(0,183,0)",
     "icons": [
         {
-            "src": "/jun07/aaa.webp",
+            "src": "/aaa.webp",
             "sizes": "512x512",
             "type": "image/webp"
         },
